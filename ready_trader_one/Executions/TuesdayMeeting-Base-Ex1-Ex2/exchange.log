@@ -1,0 +1,22 @@
+2020-03-10 15:57:58,877 [INFO   ] [APP] exchange started with arguments={run.py}
+2020-03-10 15:57:58,878 [INFO   ] [APP] configuration={"Engine":{"MarketDataFile":"data/day1.csv","MatchEventsFile":"match_events.csv","Speed":1.0,"TickInterval":0.25},"Execution":{"ListenAddress":"127.0.0.1","Port":12345},"Fees":{"Maker":-0.0001,"Taker":0.0002},"Information":{"AllowBroadcast":false,"Host":"239.255.1.1","Interface":"0.0.0.0","Port":12346},"Instrument":{"EtfClamp":0.002,"TickSize":1.0},"Limits":{"ActiveOrderCountLimit":10,"ActiveVolumeLimit":200,"MessageFrequencyInterval":1.0,"MessageFrequencyLimit":20,"PositionLimit":100},"Traders":{"TraderOne":"secret","ExampleOne":"qwerty","ExampleTwo":"12345"}}
+2020-03-10 15:57:58,880 [INFO   ] [CONTROLLER] starting the match
+2020-03-10 15:57:58,982 [INFO   ] [EXECUTION] fd=828 accepted a new connection: peer=127.0.0.1:55692
+2020-03-10 15:57:58,983 [INFO   ] [EXECUTION] fd=840 accepted a new connection: peer=127.0.0.1:55693
+2020-03-10 15:57:58,984 [INFO   ] [CONTROLLER] 'ExampleOne' is ready!
+2020-03-10 15:57:58,985 [INFO   ] [EXECUTION] fd=840 login successful: name='ExampleOne'
+2020-03-10 15:57:58,985 [INFO   ] [CONTROLLER] 'TraderOne' is ready!
+2020-03-10 15:57:58,988 [INFO   ] [EXECUTION] fd=828 login successful: name='TraderOne'
+2020-03-10 15:57:59,036 [INFO   ] [EXECUTION] fd=844 accepted a new connection: peer=127.0.0.1:55696
+2020-03-10 15:57:59,037 [INFO   ] [CONTROLLER] 'ExampleTwo' is ready!
+2020-03-10 15:57:59,037 [INFO   ] [EXECUTION] fd=844 login successful: name='ExampleTwo'
+2020-03-10 15:58:18,959 [INFO   ] [CONTROLLER] market open
+2020-03-10 16:00:54,476 [INFO   ] [COMPETITOR] 'ExampleOne' sent error message: time=155.516000 client_order_id=684 message='position limit breached'
+2020-03-10 16:00:54,477 [INFO   ] [COMPETITOR] 'ExampleOne' closing execution channel at time=155.516000
+2020-03-10 16:06:18,466 [INFO   ] [EXECUTION] fd=844 message frequency limit breached: now=479.516000 value=21 limit=20
+2020-03-10 16:06:18,467 [INFO   ] [COMPETITOR] 'ExampleTwo' sent error message: time=479.516000 client_order_id=0 message='message frequency limit breached'
+2020-03-10 16:06:18,467 [INFO   ] [COMPETITOR] 'ExampleTwo' closing execution channel at time=479.516000
+2020-03-10 16:39:40,200 [INFO   ] [MARKET_EVENTS] reader thread complete after processing 1041935 market events
+2020-03-10 16:39:48,963 [INFO   ] [CONTROLLER] shutting down the match: time=2490.016000 reason='match complete'
+2020-03-10 16:39:48,969 [INFO   ] [MATCH_EVENTS] writer thread complete after processing 37640 match events
+2020-03-10 16:39:48,971 [INFO   ] [APP] closing event loop
